@@ -16,13 +16,13 @@ import logo from '../assets/logo.png';
 export default function Login({navigation}) {
   const [user, SetUser] = useState('');
 
-  useEffect(()=> {
-    AsyncStorage.getItem('user').then(user =>{
+  useEffect(() => {
+    AsyncStorage.getItem('user').then(user => {
       if (user) {
         navigation.navigate('Main', {user});
       }
-    })
-  }, []);
+    });
+  }, [navigation]);
 
   async function handleLogin() {
     const response = await api.post('/devs', {username: user});
