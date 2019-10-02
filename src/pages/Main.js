@@ -7,19 +7,6 @@ export default function() {
     <SafeAreaView style={styles.container}>
       <Image source={logo} />
       <View style={styles.cardsContainer}>
-        <View style={[styles.card, {zIndex: 2}]}>
-          <Image
-            style={styles.avatar}
-            source={{
-              uri:
-                'https://avatars0.githubusercontent.com/u/42836882?s=460&v=4',
-            }}
-          />
-        </View>
-        <View style={styles.footer}>
-          <Text style={styles.name}>Valdeilson Ramos</Text>
-          <Text style={styles.bio}>Sou eu mesmo</Text>
-        </View>
         <View style={[styles.card, {zIndex: 1}]}>
           <Image
             style={styles.avatar}
@@ -28,15 +15,14 @@ export default function() {
                 'https://avatars0.githubusercontent.com/u/42836882?s=460&v=4',
             }}
           />
-        </View>
-        <View style={styles.footer}>
-          <Text style={styles.name}>Valdeilson Ramos</Text>
-          <Text style={styles.bio} numberOfLines={3}>
-            Sou eu mesmo
-          </Text>
+          <View style={styles.footer}>
+            <Text style={styles.name}>Valdeilson Ramos</Text>
+            <Text style={styles.bio} numberOfLines={3}>
+              Sou eu mesmo
+            </Text>
+          </View>
         </View>
       </View>
-      <View />
     </SafeAreaView>
   );
 }
